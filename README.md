@@ -6,7 +6,11 @@ My purpose in writing this software was to give me digital access to one one of 
 
 {Provide a link to your YouTube demonstration.  It should be a 4-5 minute demo of the software running, a walkthrough of the code, and a view of the cloud database.}
 
-[Software Demo Video](https://youtu.be/ALYIkUMC280) (note: this video does not show full functionallity of the software)
+[Watchwords Database Demo](https://youtu.be/ALYIkUMC280) 
+
+[Watchwords Database: Insert, Modify, Delete, Retrieve](https://youtu.be/foSk5KsDVNE)
+
+note: these video do not show the full functionallity of the software
 
 # Cloud Database
 
