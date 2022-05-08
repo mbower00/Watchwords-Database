@@ -4,13 +4,11 @@ This program uses a Firestore Database to store and recieve words for a word gam
 
 My purpose in writing this software was to give me digital access to one one of my favorite games: Codenames ([Rules](https://czechgames.com/files/rules/codenames-rules-en.pdf)). I also hope to use some of this code and the database to create a web app of the game. Also, I wrote this program to develop my skills, espcially in working with Cloud Databases.
 
-{Provide a link to your YouTube demonstration.  It should be a 4-5 minute demo of the software running, a walkthrough of the code, and a view of the cloud database.}
-
 [Watchwords Database Demo](https://youtu.be/ALYIkUMC280) 
 
 [Watchwords Database: Insert, Modify, Delete, Retrieve](https://youtu.be/foSk5KsDVNE)
 
-note: these video do not show the full functionallity of the software
+NOTE: these video do not show the full functionallity of the software
 
 # Cloud Database
 
