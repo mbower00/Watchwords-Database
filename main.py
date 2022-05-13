@@ -124,13 +124,18 @@ def play_game(fireman, comissioner, spokesman):
         word_pack = input(f"Please enter a word pack to add ('done' to finish) {word_packs} > ")
         if word_pack != "done":
             word_packs.append(word_pack)
+    show_numbers = input("Show Numbers? [y] > ")
+    if show_numbers == "y":
+        show_numbers = True
+    else:
+        show_numbers = False
     while is_playing:
         comissioner.generate_watchwords(word_packs, fireman)
         answer_file = spokesman.give_answers("answers.txt")
         if should_email == "y":
             email_file(answer_file, receiver_email_address_1, sender_password)
             email_file(answer_file, receiver_email_address_2, sender_password)
-        spokesman.display_board(True)
+        spokesman.display_board(True, show_numbers=show_numbers)
         print("Enter: [COL][ROW] ('done' to finish) ", end="")
         while True:
             result = spokesman.get_and_convert_row_col_input()
@@ -138,7 +143,7 @@ def play_game(fireman, comissioner, spokesman):
                 break
             spokesman.color_watchword(result)
             print("\n\n\n\n\n\n\n")
-            spokesman.display_board(False)
+            spokesman.display_board(False, show_numbers=show_numbers)
         if input("Play again? [y] > ") != "y":
             is_playing = False
 

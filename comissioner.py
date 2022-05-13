@@ -21,6 +21,7 @@ class Comissioner:
             collections (list): the collections from which to pull watchwords
             fireman (Fireman): the Fireman object
         """
+        self.color_word_key = {}
         self.watchwords = [] # reset watchwords
         results = []
         self._decide_words(collections, fireman)

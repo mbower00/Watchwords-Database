@@ -16,13 +16,14 @@ class Spokesman:
         self.BLACK = "\u001b[30m"
         self.NORMAL = "\u001b[00m"
 
-    def display_board(self, is_first_time, target="default", cell_length_measure_wordset="default"):
+    def display_board(self, is_first_time, target="default", cell_length_measure_wordset="default", show_numbers=False):
         """displays the game board to the target
 
         Args:
             is_first_time (bool): whether this is the first time this game board with these watchword values has been displayed
             target (str, optional): The file in which to display the game board. Defaults to "default" which displays to the terminal.
             cell_length_measure_wordset (list, optional): A list from which to measure the cell length. Defaults to "default" which uses the member's member: comissioner.watchwords.
+            show_numbers (bool, optional): Whether or not to show the row and column numbers on the board. Defaults to False
         """
         if is_first_time:
             if cell_length_measure_wordset == "default":
@@ -37,16 +38,36 @@ class Spokesman:
                 self.length_in_dashes += "-"
         watchword_index = 0
         if target == "default":
-            print(f"-{self.length_in_dashes}-{self.length_in_dashes}-{self.length_in_dashes}-{self.length_in_dashes}-{self.length_in_dashes}-")
+            if show_numbers:
+                spacing_length = self.length+10
+                print(f"   {self.YELLOW+str(1)+self.NORMAL : ^{spacing_length}} {self.YELLOW+str(2)+self.NORMAL : ^{spacing_length}} {self.YELLOW+str(3)+self.NORMAL : ^{spacing_length}} {self.YELLOW+str(4)+self.NORMAL : ^{spacing_length}} {self.YELLOW+str(5)+self.NORMAL : ^{spacing_length}} ")
+                print(f"  -{self.length_in_dashes}-{self.length_in_dashes}-{self.length_in_dashes}-{self.length_in_dashes}-{self.length_in_dashes}-")
+            else:
+                print(f"-{self.length_in_dashes}-{self.length_in_dashes}-{self.length_in_dashes}-{self.length_in_dashes}-{self.length_in_dashes}-")
         else:
             with open(target, "a") as the_file:
-                print(f"-{self.length_in_dashes}-{self.length_in_dashes}-{self.length_in_dashes}-{self.length_in_dashes}-{self.length_in_dashes}-", file=the_file)
+                if show_numbers:
+                    spacing_length = self.length+10
+                    print(f"   {self.YELLOW+str(1)+self.NORMAL : ^{spacing_length}} {self.YELLOW+str(2)+self.NORMAL : ^{spacing_length}} {self.YELLOW+str(3)+self.NORMAL : ^{spacing_length}} {self.YELLOW+str(4)+self.NORMAL : ^{spacing_length}} {self.YELLOW+str(5)+self.NORMAL : ^{spacing_length}} ", file=the_file)
+                    print(f"  -{self.length_in_dashes}-{self.length_in_dashes}-{self.length_in_dashes}-{self.length_in_dashes}-{self.length_in_dashes}-", file=the_file)
+                else:
+                    print(f"-{self.length_in_dashes}-{self.length_in_dashes}-{self.length_in_dashes}-{self.length_in_dashes}-{self.length_in_dashes}-", file=the_file)
+        if show_numbers:
+            row_count = 1
         for _ in range(5):
             if target == "default":
-                print("|", end="")
+                if show_numbers:
+                    print(f"{self.YELLOW + str(row_count) + self.NORMAL} |", end="")
+                    row_count += 1
+                else:
+                    print("|", end="")
             else:
                 with open(target, "a") as the_file:
-                    print("|", end="", file=the_file)
+                    if show_numbers:
+                        print(f"{self.YELLOW + str(row_count) + self.NORMAL} |", end="", file=the_file)
+                        row_count += 1
+                    else:
+                        print("|", end="", file=the_file)
             for _ in range(5):
                 word = self.comissioner.watchwords[watchword_index]
                 if word.find("\u001b[") != -1:
@@ -60,10 +81,16 @@ class Spokesman:
                         print(f"{word : ^{spacing_length}}|", end="", file=the_file)
                 watchword_index += 1
             if target == "default":
-                print(f"\n-{self.length_in_dashes}-{self.length_in_dashes}-{self.length_in_dashes}-{self.length_in_dashes}-{self.length_in_dashes}-")
+                if show_numbers:
+                    print(f"\n  -{self.length_in_dashes}-{self.length_in_dashes}-{self.length_in_dashes}-{self.length_in_dashes}-{self.length_in_dashes}-")
+                else:
+                    print(f"\n-{self.length_in_dashes}-{self.length_in_dashes}-{self.length_in_dashes}-{self.length_in_dashes}-{self.length_in_dashes}-")
             else:
                 with open(target, "a") as the_file:
-                    print(f"\n-{self.length_in_dashes}-{self.length_in_dashes}-{self.length_in_dashes}-{self.length_in_dashes}-{self.length_in_dashes}-", file=the_file)
+                    if show_numbers:
+                        print(f"\n  -{self.length_in_dashes}-{self.length_in_dashes}-{self.length_in_dashes}-{self.length_in_dashes}-{self.length_in_dashes}-", file=the_file)
+                    else:
+                        print(f"\n-{self.length_in_dashes}-{self.length_in_dashes}-{self.length_in_dashes}-{self.length_in_dashes}-{self.length_in_dashes}-", file=the_file)
     
     def give_answers(self, target="default"):
         """displays the answers (watchwords with corrisponding color) to target
