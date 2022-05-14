@@ -1,0 +1,25 @@
+The Mouth Of Sauron-----RED
+Eagle-------------------RED
+Tom Bombadil------------RED
+Cave Troll--------------RED
+Boom--------------------RED
+Trunk-------------------RED
+Battery-----------------RED
+Washer------------------RED
+Bree--------------------RED
+Helm's Deep------------BLUE
+Fall-------------------BLUE
+Skyscraper-------------BLUE
+Promise----------------BLUE
+Sauron-----------------BLUE
+Gollum-----------------BLUE
+Theoden----------------BLUE
+Radagast---------------BLUE
+Australia-------------BLACK
+Doctor---------------YELLOW
+Potatoes-------------YELLOW
+Hobbit---------------YELLOW
+Soldier--------------YELLOW
+Mithril--------------YELLOW
+Strike---------------YELLOW
+Treebeard------------YELLOW

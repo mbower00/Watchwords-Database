@@ -62,6 +62,7 @@ Libraries:
 * [youtube](https://www.youtube.com/watch?v=haMOUb3KVSo&list=PLl-K7zZEsYLluG5MCVEzXAQ7ACZBCuZgZ&index=5)
 * [firebase](https://firebase.google.com/docs/firestore/)
 * [replit](https://replit.com/@cmacbeth)
+* [clifnotes](//www.cliffsnotes.com)
 
 # Future Work
 

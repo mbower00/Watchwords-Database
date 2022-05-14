@@ -1,0 +1,25 @@
+Hobbit------------------BLUE
+Gondor------------------BLUE
+Boromir-----------------BLUE
+Lothlorien--------------BLUE
+Meriadoc Brandybuck-----BLUE
+Bilbo Baggins-----------BLUE
+Ent---------------------BLUE
+Second Breakfast--------BLUE
+Eagle-------------------BLUE
+The One Ring-------------RED
+Elven Cloak--------------RED
+Tom Bombadil-------------RED
+Bree---------------------RED
+Gandalf------------------RED
+There And Back Again-----RED
+Gimli--------------------RED
+The Shire----------------RED
+Bag End----------------BLACK
+Elf-------------------YELLOW
+Warg------------------YELLOW
+Smeagol---------------YELLOW
+Gollum----------------YELLOW
+Galadriel-------------YELLOW
+Moria-----------------YELLOW
+Mount Doom------------YELLOW
